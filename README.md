@@ -14,7 +14,10 @@ This Flutter app replicates the Stroll Bonfire UI as part of the interview task.
 2. Navigate to the project directory:
 ```cd stroll_bonfire_task```
 
-3. Run the app:
+3. Get packages
+```flutter pub get``` 
+
+4. Run the app:
 ```flutter run```
 
 
