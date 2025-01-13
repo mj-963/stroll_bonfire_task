@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:stroll_bonfire_task/utils/app_colors.dart';
 
 class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
@@ -6,18 +7,24 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Column(
+    return Column(
       children: [
-        Row(
+        const Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
               "Stroll Bonfire",
               style: TextStyle(
-                fontSize: 30,
-                fontWeight: FontWeight.bold,
-                color: AppColors.primary,
-              ),
+                  fontSize: 35,
+                  fontWeight: FontWeight.bold,
+                  color: AppColors.primary,
+                  shadows: [
+                    Shadow(
+                      offset: Offset(1, 2),
+                      blurRadius: 8.0,
+                      color: Color.fromRGBO(0, 0, 0, 0.25),
+                    ),
+                  ]),
             ),
             Icon(
               Icons.keyboard_arrow_down,
@@ -29,22 +36,32 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Icon(
-              Icons.timer,
-              size: 16,
+            SvgPicture.asset(
+              'assets/icons/timer.svg',
+              height: 16,
+              width: 16,
+              colorFilter: const ColorFilter.mode(
+                Colors.white,
+                BlendMode.srcIn,
+              ),
             ),
-            SizedBox(width: 4),
-            Text(
+            const SizedBox(width: 4),
+            const Text(
               "22h 00m",
               style: TextStyle(fontSize: 14),
             ),
-            SizedBox(width: 16),
-            Icon(
-              Icons.group,
-              size: 16,
+            const SizedBox(width: 16),
+            SvgPicture.asset(
+              'assets/icons/user.svg',
+              height: 20,
+              width: 20,
+              colorFilter: const ColorFilter.mode(
+                Colors.white,
+                BlendMode.srcIn,
+              ),
             ),
-            SizedBox(width: 4),
-            Text(
+            const SizedBox(width: 4),
+            const Text(
               "103",
               style: TextStyle(fontSize: 14),
             ),

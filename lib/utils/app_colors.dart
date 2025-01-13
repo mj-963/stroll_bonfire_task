@@ -7,11 +7,11 @@ class AppColors {
 
 // Brand Colors
   static const Color primary = Color(0xFFCCC8FF); // Updated main purple color
-  static const Color primaryLight = Color(0xFFDEDBFF); // Lighter shade
-  static const Color primaryDark = Color(0xFFB3AEFF); // Darker shade
+  static const Color primaryLight = Color(0xFFCBC9FF); // Lighter shade
+  static const Color primaryDark = Color(0xFF8B88EF); // Darker shade
 
   // Background Colors
-  static const Color backgroundDark = Color(0xFF121212); // Deep dark background
+  static const Color backgroundDark = Colors.black; // Deep dark background
   static const Color backgroundMedium = Color(0xFF1E1E1E); // Card backgrounds
   static const Color backgroundLight = Color(0xFF2C2C2C); // Elevated surfaces
 
